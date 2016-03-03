@@ -1,0 +1,10 @@
+.describe-input{
+	columns: 5;
+}
+#alter-photo{
+	margin-top: 3.2em;
+}
+#alter-photo img{
+	height: 3em;
+	width: 3em;
+}

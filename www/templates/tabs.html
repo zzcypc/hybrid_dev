@@ -1,0 +1,17 @@
+<ion-tabs class="tabs-striped tabs-background-light tabs-color-assertive tabs-icon-top">
+
+	<a class="col-33 col-offset-33 button button-icon" ng-click="addmodalshow()" style="height: 100%; width:100%;position: absolute;text-align: center;">
+		<img ng-src="img/ios7-camera.png" style="height: 100%;"></img>
+	</a>
+
+	<ion-tab title="东大" icon-off="ion-aperture" icon-on="ion-aperture" href="#/tab/main">
+		<ion-nav-view name="tab-main"></ion-nav-view>
+	</ion-tab>
+	
+	<ion-tab title="" disabled="true">
+	</ion-tab>
+	
+	<ion-tab title="设置" icon-off="ion-gear-a" icon-on="ion-gear-a" href="#/tab/setting">
+		<ion-nav-view name="tab-setting"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>

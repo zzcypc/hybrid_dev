@@ -1,0 +1,139 @@
+<ion-view>
+    <!--<div class="bar bar-header  item-input-inset" style="background-color:firebrick">
+        <div class="item-input-wrapper" style="padding-right: 0px;">
+            <input ng-model="searchinput" type="text" placeholder="盖伦同款内裤"  style="color: #666666">
+            <a class="ion-android-search" ng-click="search()"></a>
+
+        </div>
+    </div>-->
+    <div class="bar bar-header" style="background-color:#F95860;">
+    	<h1 class="title light"><strong>旧物继承</strong></h1>
+        <a class="button button-icon icon ion-ios-search light" ng-click="opensearchmodal()"></a>
+    </div>
+
+    <ion-content class="stable-bg has-header">
+
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div class="row light-bg main_top" style="width: 100%;">
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('A')">
+                    <img class="full-image-me" src="img/1.png">
+                    <b id="button_b">日常用品</b>
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('B')">
+                    <img class="full-image-me" src="img/2.png">
+                    <b id="button_b">书籍杂志</b>
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('C')">
+                    <img class="full-image-me" src="img/3.png">
+                    <b id="button_b">娱乐运动</b>
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-icon" ng-click="sorry()">
+                    <img class="full-image-me" src="img/7.png">
+                    <b id="button_b">零食拼单</b>
+                </button>
+            </div>
+        </div>
+        <div class="row light-bg main_top" style="width: 100%;">
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('D')">
+                    <img class="full-image-me" src="img/4.png">
+                    <b id="button_b">代步工具</b>
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('E')">
+                    <img class="full-image-me" src="img/5.png">
+                    <b id="button_b">小型家电</b>
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('F')">
+                    <img class="full-image-me" src="img/8.png">
+                    <b id="button_b">衣服箱包</b>
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-icon" ng-click="load_kind('G')">
+                    <img class="full-image-me" src="img/6.png">
+                    <b id="button_b">其他商品</b>
+                </button>
+            </div>
+        </div>
+
+        <img class="full-image" src="img/back.png">
+		
+        <ion-list>
+        	<br>
+        	<button class="button button-icon" style="left: -7px;">
+        		<b style="position: absolute; color: #FFFFFF;left: 17px;">{{bookmark}}</b>
+        		<img ng-src="img/bookmark.png" style="width: 100px;height: 40px;" />
+        	</button>
+            <!--第一行-->
+            <div class="row" collection-repeat="item in items">
+
+                <div class="card col" ng-click="xiangqing(item.goods_id1)">
+                    <div class="item item-image" style="height: 150px; text-align: center;">
+                        <img ng-src="{{item.picture1}}" style="height: 100%;width: auto">
+                    </div>
+                    <div class="item">
+                        <p>
+                            {{item.goods_name1}}
+
+                        </p>
+                    </div>
+                    <div class="item row labe">
+                        <a class="col icon-left assertive">
+                            <i class="icon ion-heart"></i>
+                            {{item.view1}}
+                        </a>
+                        <a class="col icon-left dark">
+                            <i class="icon ion-social-yen"></i>
+                            {{item.current_price1}}
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card col" ng-click="xiangqing(item.goods_id2)">
+
+                    <div class="item item-image" style="height: 150px; text-align: center;">
+                        <img ng-src="{{item.picture2}}" style="height: 100%;width: auto">
+                    </div>
+
+                    <div class="item ">
+                        <p>
+                            {{item.goods_name2}}
+                        </p>
+                    </div>
+                    <div class="item row labe">
+                        <a class="col icon-left assertive">
+                            <i class="icon ion-heart"></i>
+                            {{item.view2}}
+                        </a>
+                        <a class="col icon-left dark">
+                            <i class="icon ion-social-yen"></i>
+                            {{item.current_price2}}
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </ion-list>
+
+        <ion-infinite-scroll   on-infinite="load_more()" icon="ion-load-b" distance="0%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+<!--    <button class="button button-icon" ng-click="addmodal()" style="position:absolute;bottom:0;right:0;">
+        <img src="img/add.png" style="height: 60px;width: 60px;">
+    </button>-->
+</ion-view>

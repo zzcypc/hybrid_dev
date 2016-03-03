@@ -1,0 +1,57 @@
+<div class="modal">
+
+    <div class="bar bar-header" style="position:relative; background-color:#F95860;">
+        <button class="button button-icon icon ion-ios-close-outline light" ng-click="backedit()"></button>
+        <div class="h1 title" style="color: #FFFFFF;">修改商品信息</div>
+        <button class="button button-icon icon ion-ios-checkmark-outline light" ng-click="amend()"></button>
+    </div>
+
+
+    <div class="background-grey-little row">
+
+        <div class="col-25" style="text-align:center;overflow: hidden;" ng-show="images.count>0" ng-click="dele(1)">
+            <img ng-src="{{images.pic1}}"  style="height: 80px;width: auto;"/>
+        </div>
+        <div class="col-25" style="text-align:center;overflow: hidden;margin-left: 5px;" ng-show="images.count>1" ng-click="dele(2)">
+            <img ng-src="{{images.pic2}}"  style="height: 80px;width: auto;"/>
+        </div>
+        <div class="col-25" style="text-align:center;overflow: hidden;margin-left: 5px;" ng-show="images.count>2" ng-click="dele(3)">
+            <img ng-src="{{images.pic3}}"  style="height: 80px;width: auto;"/>
+        </div>
+
+        <div class="col-25" ng-click="addpic()" style="text-align:center;">
+            <a class="button button-positive" style="height: 80px;">
+            	<i class="icon ion-android-add" style="position: absolute;margin-top: 15px;right: 30%;"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="list">
+    	
+    	<div class="h6" style="text-align: center;color: #666666;"><strong>推荐上传横屏图片，展示效果更佳</strong></div>
+    	
+        <label class="item item-input">
+            <span class="input-label">商品名称</span>
+            <input  type="text" ng-model="good.name" placeholder="请输入您的宝贝名称">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">原价</span>
+            <input  type="text" ng-model="good.oprice">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">现价</span>
+            <input  type="text" ng-model="good.cprice">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">商品描述</span>
+        <textarea rows="5" class="describe-input"
+                  placeholder="请详细描述您的宝贝，越详细，卖出去的可能性越大~~" ng-model="good.des"> </textarea>
+        </label>
+        <label class="item row" ng-click="showtype()">
+            <span class="col input-label">宝贝类型</span>
+            <b class="col assertive" ng-bind="goodtype"></b>
+        </label>
+
+    </div>
+</div>

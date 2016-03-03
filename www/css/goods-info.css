@@ -1,0 +1,65 @@
+/*商品名称和浏览量*/
+/*.head-row{
+	padding-left: 16px;
+	padding-right: 16px;
+}*/
+#slidebox{
+	margin-top: 3.1em;
+	width: 100%;
+	margin-bottom: -0.7em;
+}
+.box img{
+	width: 100%;
+	height: 20em;
+}
+.page-views-detail{
+	float: right;
+}
+.page-views{
+	color: white;
+	background-color: red;
+	-moz-border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	border-radius: 0.2em;
+	padding-right: 7px;
+}
+.detail-block{
+	padding-bottom: 0px !important;
+}
+#location-price{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background-color: white;
+}
+.location-icon{
+	font-size: 1.5em;
+}
+.location-describe{
+	font-size: 1em;
+}
+.good-cost{
+	float: right;
+}
+.good-cost-now{
+	color: red;
+	font-size: 1.7em;
+}
+.good-cost-before{
+	font-size: 1.2em;
+	text-decoration: line-through;
+}
+.goods-info{
+	margin-top: 0px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.contactinfo{
+	margin-left: 3px;
+}
+.sell-info{
+	
+}
+#good-describe-show,
+#info-show{
+	background-color: white;
+}

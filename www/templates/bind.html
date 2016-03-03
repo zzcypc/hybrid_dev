@@ -1,0 +1,64 @@
+<div class="stable-bg modal">
+    <div class="bar bar-header" style="position:relative;background-color:#F95860;">
+        <button class="button button-icon icon ion-chevron-left light" ng-click="back1()"></button>
+        <div class="h1 title" style="color: #FFFFFF;">绑定</div>
+    </div>
+    <ion-content>
+        <div class="partup">
+            <span>
+
+                <img src="img/jiaowu.png" id="img1"/>
+
+                <img src="img/jiantou.png" id="img2"/>
+
+                <img src="img/shouji.png" id="img3"/>
+
+            </span>
+        </div>
+
+        <div ng-show="!beacon">
+            <div class="h6" style="text-align:center;">请输入您的<strong>教务系统的账号密码</strong>以便于获取您的基础信息</div>
+            <div class="h6" style="text-align:center;"><strong>绑定功能会受教务系统影响</strong></div>
+            <br>
+            <ng-form name='addUserForm' class="list" method="post">
+                <label class="item item-input">
+                    <input type="text" ng-model='user.schoolnum' required placeholder="学号">
+                </label>
+                <label class="item item-input">
+                    <input type="password" ng-model='user.password' required placeholder="密码">
+                </label>
+
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="电话" ng-model="user.phonenum">
+                    </label>
+                    <button id="ver_bt" class="button button-small button-outline button-calm" ng-click="sendvcode()">
+                        {{ver_text}}
+                    </button>
+                </div>
+
+                <label class="item item-input">
+                    <input type="text" ng-model="user.vcode" placeholder="短信验证码">
+                </label>
+
+
+
+                <button ng-disabled='!addUserForm.$valid' class="button button-block button-outline button-positive"
+                        ng-click='bind()'>
+                    绑定
+                </button>
+            </ng-form>
+        </div>
+        <div ng-show="beacon">
+            <div class="h4 stu_info"><b>学号：</b><b ng-bind="buser.stuNum"></b></div>
+            <div class="h4 stu_info"><b>姓名：</b><b ng-bind="buser.name"></b></div>
+            <div class="h4 stu_info"><b>学院：</b><b ng-bind="buser.college"></b></div>
+            <br>
+            <br>
+            <button class="button button-block button-outline button-positive" ng-click='cancelbind()'>
+                取消绑定
+            </button>
+        </div>
+
+    </ion-content>
+</div>

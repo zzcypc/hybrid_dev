@@ -1,0 +1,64 @@
+/* Empty. Add your own CSS if you like */
+.tabs-top > .tabs, .tabs.tabs-top {
+    top: 0px;
+}
+#no-padding{
+    padding-left:  0;
+    padding-right: 0;
+    margin-inside: 0;
+}
+
+/*main界面用到的*/
+#button_b{
+    position: relative;
+    top:      -15px;
+    font-size: 13px;
+    display:block;
+}
+.full-image-me{
+    width:70%;
+}
+.main_top div{
+    text-align:center;
+}
+.labe a{
+    text-align:center;
+}
+
+/*bind界面用到的*/
+.partup {
+    width: 100%;
+    text-align: center;
+}
+.partup span {
+    height: 100%;
+    width: 100%;
+}
+#img1 {
+    width: 25%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+#img3 {
+    width: 20%;
+    margin-left: 3%;
+    margin-top: 20%;
+}
+#img2 {
+    width: 10%;
+    height: 5%;
+    margin-bottom: 10%;
+    margin-left: 2%;
+}
+.stu_info{
+    text-align: center;
+}
+
+/*发布界面用到的*/
+.describe-input{
+    columns: 5;
+}
+#alter-photo img{
+    height: 3em;
+    width: 3em;
+}

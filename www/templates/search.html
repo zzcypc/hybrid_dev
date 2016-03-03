@@ -1,0 +1,34 @@
+<div class="stable-bg modal">
+	
+    <div class="bar bar-header item-input-inset" style="background-color:#F95860;">
+        <button class="button button-icon icon ion-chevron-left light" ng-click="backsearchmodal()"></button>
+        <div class="item-input-wrapper" style="padding-right: 0px;">
+            <input ng-model="keyword" type="text" placeholder="盖伦同款内裤" ng-keyup="change(keyword)"
+                   style="color: #666666">
+            <a class="ion-android-search" ng-click="change(keyword)"></a>
+        </div>
+    </div>
+    
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item ng-repeat="item in searchs" class="item item-thumbnail-left" ng-click="xiangqing(item.goods_id)">
+
+                <div class="item-image" style="height: 110px;width: 30%;overflow: hidden; text-align: center;">
+					<img ng-src="{{item.picture}}" style="height: 100%;width: auto">
+				</div>
+
+                <p>{{item.goods_name}}</p>
+
+                <b class="assertive">{{item.current_price}}</b>
+
+                <br>
+                <span class="badge badge-assertive" style="top:28px">{{item.view}}</span>
+                <br>
+
+                <p>{{item.pub_date}}</p>
+
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</div>

@@ -1,0 +1,61 @@
+<div class="modal">
+	
+    <div class="bar bar-header" style="background-color:#F95860;">
+        <button class="button button-icon icon ion-chevron-left light" ng-click="detailmodalhide()"></button>
+    </div>
+
+    <ion-content class="has-header">
+        <ion-list>
+
+            <ion-slide-box does-continue="true" auto-play="flase" style="width: 100%;height: 300px;">
+                <ion-slide>
+                    <div class="box" style="text-align: center;overflow: hidden;">
+                        <img ng-src="{{detail.picture1}}" style="height: 300px;width: auto"/>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box" style="text-align: center;overflow: hidden;">
+                        <img ng-src="{{detail.picture2}}" style="height: 300px;width: auto"/>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box" style="text-align: center;overflow: hidden;">
+                        <img ng-src="{{detail.picture3}}" style="height: 300px;width: auto"/>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+
+            <div class="item row">
+                <b class="col" style="text-align: center;">{{detail.goods_name}}</b>
+                <div class="col" style="text-align: right;">
+                    <span class="assertive" style="margin-right: 10px;">{{detail.current_price|currency:"￥"}}</span>
+                    <span style="text-decoration: line-through;font-size: x-small;">{{detail.original_price|currency:"￥"}}</span>
+                </div>
+            </div>
+
+            <div class="item row">
+                <p class="col" style="text-align: center;">浏览次数 {{detail.view}}</p>
+                <p class="col" style="text-align: right;">{{detail.pub_date}}</p>
+            </div>
+
+            <div class="item item-divider">
+
+            </div>
+
+            <div class="card">
+                <div class="item item-avatar">
+                    <img src="img/head-temp.jpg">
+                    <b>{{detail.owner}}</b>
+                    <p>{{detail.major}}</p>
+                </div>
+                <a class="item item-icon-left positive" href="tel:{{detail.cellphone}}">
+                    <i class="icon ion-android-call"></i>{{detail.cellphone}}
+                </a>
+                <div class="item item-body">
+                    <p>{{detail.description}}</p>
+                </div>
+            </div>
+
+        </ion-list>
+    </ion-content>
+</div>

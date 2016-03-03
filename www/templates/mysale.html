@@ -1,0 +1,38 @@
+<div class="stable-bg modal">
+
+	<ion-header-bar style="background-color:#F95860;">
+		<a class="button button-icon icon ion-chevron-left light" ng-click="backmysale()"></a>
+		<h1 class="title" style="color: #FFFFFF;">我的二手（左滑商品进行操作）</h1>
+	</ion-header-bar>
+
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="item in items" class="item item-thumbnail-left">
+
+				<div class="item-image" style="height: 110px;width: 30%;overflow: hidden; text-align: center;">
+					<img ng-src="{{item.picture}}" style="height: 100%;width: auto">
+				</div>
+
+				<p>{{item.goods_name}}</p>
+
+				<b class="assertive">{{status[item.status]}}</b>
+
+				<br>
+				<span class="badge badge-assertive" style="top:28px">浏览量{{item.view}}</span>
+				<br>
+
+				<p>{{item.pub_date}}</p>
+
+				<ion-option-button class="button-energized" ng-click="edit(item.goods_id)">
+					修改
+				</ion-option-button>
+
+				<ion-option-button class="button-assertive" ng-click="changeStatus(item.goods_id,item.status,$index)">
+					{{under[item.status]}}
+				</ion-option-button>
+
+			</ion-item>
+
+		</ion-list>
+	</ion-content>
+</div>

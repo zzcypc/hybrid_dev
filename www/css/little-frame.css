@@ -1,0 +1,49 @@
+/*整体样式*/
+*{
+	background-color: ;
+}
+.color-grey{
+	color: grey;
+}
+.color-white{
+	color: white;
+}
+.color-black{
+	color: black;
+}
+.color-red{
+	color: red;
+}
+.border-none{
+	border: none;
+}
+.boder-top-none{
+	border-top: none;
+}
+.border-bottom-none{
+	border-bottom: none;
+}
+.float-right{
+	float: right;
+}
+.float-left{
+	float: left;
+}
+.gap-grey{
+	background-color: #eeeff3;
+	width: 100%;
+	height: 0.2em;
+}
+.background-brown{
+	background-color: #2b3a41;
+}
+.background-white{
+	background-color: white;
+}
+.background-yellow{
+	background-color: #eec85d;
+}
+.background-grey-little{
+	background-color: #eeeff3;
+}
+
