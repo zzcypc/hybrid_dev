@@ -11,7 +11,7 @@
 
 - 由于是hybrid app，担心接口暴露后信息被抓包，在接口安全上做了很多努力，处理了图片上传的并发问题（其实是自己造成的并发）。后端是嘉陵和粽子一起完成的，做到了教务处系统的模拟登陆，给人一种我们黑了教务处数据库的感觉，哈哈哈~
 
-![image](https://raw.githubusercontent.com/Picknight/hybrid_dev/master/resources/struct.png)
+![image](https://raw.githubusercontent.com/Picknight/hybrid_dev/master/resources/struct.svg)
 
 ![image](https://raw.githubusercontent.com/Picknight/hybrid_dev/master/resources/show.png)
 
